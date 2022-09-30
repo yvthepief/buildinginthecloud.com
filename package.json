@@ -1,5 +1,6 @@
 {
   "name": "buildinginthecloud.com",
+  "description": "CDK code for buildingthecloud.com",
   "scripts": {
     "build": "npx projen build",
     "bundle": "npx projen bundle",
@@ -23,6 +24,11 @@
     "upgrade": "npx projen upgrade",
     "watch": "npx projen watch",
     "projen": "npx projen"
+  },
+  "author": {
+    "name": "Yvo van Zee",
+    "email": "no-reply@dontsendmemails.com",
+    "organization": false
   },
   "devDependencies": {
     "@types/jest": "^29.1.0",
