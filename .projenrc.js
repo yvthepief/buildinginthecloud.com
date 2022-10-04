@@ -6,6 +6,7 @@ const project = new awscdk.AwsCdkTypeScriptApp({
   authorEmail: 'no-reply@dontsendmemails.com',
   authorName: 'Yvo van Zee',
   description: 'CDK code for buildingthecloud.com',
+  repository: 'https://github.com/yvthepief/secure_bucket_construct.git',
   // deps: [],                /* Runtime dependencies of this module. */
   // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
   // devDeps: [],             /* Build dependencies for this module. */
