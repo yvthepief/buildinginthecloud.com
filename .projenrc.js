@@ -10,6 +10,7 @@ const project = new awscdk.AwsCdkTypeScriptApp({
   defaultReleaseBranch: 'main',
   autoApproveOptions: {
     secret: 'PROJEN_GITHUB_TOKEN',
+    allowedUsernames: ['yvthepief'],
   },
 });
 project.synth();
