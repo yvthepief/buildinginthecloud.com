@@ -1,0 +1,161 @@
+digraph "Diagram" {
+  splines = "ortho";
+  pad = "1.0";
+  nodesep = "0.60";
+  ranksep = "0.75";
+  fontname = "Sans-Serif";
+  fontsize = "15";
+  dpi = "200";
+  rankdir = "BT";
+  compound = "true";
+  fontcolor = "#222222";
+  edge [
+    color = "#D5871488",
+    penwidth = 2,
+    arrowhead = "dot",
+    arrowtail = "dot",
+  ];
+  node [
+    shape = "box",
+    style = "rounded",
+    fixedsize = true,
+    width = 1.7,
+    height = 1.7,
+    labelloc = "c",
+    imagescale = true,
+    fontname = "Sans-Serif",
+    fontsize = 8,
+    margin = 8,
+  ];
+  subgraph "buildinginthecloudcom-dev" {
+    subgraph "cluster-SubGraph.buildinginthecloudcom-dev" {
+      graph [
+        label = "buildinginthecloudcom-dev",
+        labelloc = "b",
+        labeljust = "l",
+        margin = "10",
+        fontsize = "16",
+        penwidth = "2",
+        pencolor = "#888888",
+        style = "filled,rounded",
+        fillcolor = "#e4e4e4",
+      ];
+      subgraph "cluster-SubGraph.Redirect" {
+        graph [
+          label = "Redirect",
+          labelloc = "b",
+          labeljust = "l",
+          margin = "10",
+          fontsize = "16",
+          penwidth = "2",
+          pencolor = "#888888",
+          style = "filled,rounded",
+          fillcolor = "#d6d6d6",
+        ];
+        "buildinginthecloudcom-dev/Redirect/RedirectBucket" [
+          label = " RedirectBucket",
+          fontsize = 12,
+          image = "/opt/homebrew/lib/node_modules/cdk-dia/icons/aws/Service/Arch_Storage/64/Arch_Amazon-S3-Standard_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 2,
+          height = 2.266,
+        ];
+        "buildinginthecloudcom-dev/Redirect/RedirectAliasRecordc02fee" [
+          label = "\nRedirectAliasRecordc0",
+          fontsize = 12,
+          image = "/opt/homebrew/lib/node_modules/cdk-dia/icons/aws/Resource/Res_Networking-and-Content-Delivery/Res_48_Dark/Res_Amazon-Route-53-Hosted-Zone_48_Dark_gen.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 1.2,
+          height = 1.682,
+        ];
+        "buildinginthecloudcom-dev/Redirect/RedirectAliasRecordSixc02fee" [
+          label = "\nRedirectAliasRecordSi",
+          fontsize = 12,
+          image = "/opt/homebrew/lib/node_modules/cdk-dia/icons/aws/Resource/Res_Networking-and-Content-Delivery/Res_48_Dark/Res_Amazon-Route-53-Hosted-Zone_48_Dark_gen.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 1.2,
+          height = 1.682,
+        ];
+        "buildinginthecloudcom-dev/Redirect/RedirectDistribution/CFDistribution" [
+          label = " CloudFront\nDistribution\nCFDistribution",
+          fontsize = 12,
+          image = "/opt/homebrew/lib/node_modules/cdk-dia/icons/aws/Service/Arch_Networking-Content/64/Arch_Amazon-CloudFront_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 2,
+          height = 2.6979999999999995,
+        ];
+        subgraph "cluster-SubGraph.RedirectCertificate" {
+          graph [
+            label = "RedirectCertificate",
+            labelloc = "b",
+            labeljust = "l",
+            margin = "10",
+            fontsize = "16",
+            penwidth = "2",
+            pencolor = "#888888",
+            style = "filled,rounded",
+            fillcolor = "#c7c7c7",
+          ];
+          "buildinginthecloudcom-dev/Redirect/RedirectCertificate/CertificateRequestorFunction" [
+            label = "\nCertificateRequestorF",
+            fontsize = 12,
+            image = "/opt/homebrew/lib/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.4819999999999998,
+          ];
+          "buildinginthecloudcom-dev/Redirect/RedirectCertificate/CertificateRequestorResource" [
+            label = " CloudFormation\nCustomResource",
+            fontsize = 12,
+            image = "/opt/homebrew/lib/node_modules/cdk-dia/icons/aws/Service/Arch_Management-Governance/64/Arch_AWS-CloudFormation_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.682,
+          ];
+        }
+      }
+    }
+  }
+  "buildinginthecloudcom-dev/Redirect/RedirectAliasRecordc02fee" -> "buildinginthecloudcom-dev/Redirect/RedirectDistribution/CFDistribution" [
+    dir = "both",
+  ];
+  "buildinginthecloudcom-dev/Redirect/RedirectAliasRecordSixc02fee" -> "buildinginthecloudcom-dev/Redirect/RedirectDistribution/CFDistribution" [
+    dir = "both",
+  ];
+  "buildinginthecloudcom-dev/Redirect/RedirectDistribution/CFDistribution" -> "buildinginthecloudcom-dev/Redirect/RedirectCertificate/CertificateRequestorResource" [
+    dir = "both",
+  ];
+  "buildinginthecloudcom-dev/Redirect/RedirectDistribution/CFDistribution" -> "buildinginthecloudcom-dev/Redirect/RedirectBucket" [
+    dir = "both",
+  ];
+}
