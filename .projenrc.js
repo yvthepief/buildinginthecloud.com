@@ -11,7 +11,7 @@ const project = new awscdk.AwsCdkTypeScriptApp({
   autoApproveOptions: {
     secret: 'PROJEN_GITHUB_TOKEN',
     allowedUsernames: ['yvthepief'],
-    label: 'auto-approve'
+    label: 'auto-approve',
   },
   autoMerge: true
 });
