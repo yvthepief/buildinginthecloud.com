@@ -9,7 +9,14 @@ const project = new awscdk.AwsCdkTypeScriptApp({
   repository: 'https://github.com/yvthepief/secure_bucket_construct.git',
   defaultReleaseBranch: 'main',
   autoApproveOptions: {
-    secret: 'PROJEN_GITHUB_TOKEN',
+    secret: 'GITHUB_TOKEN',
+    allowedUsernames: ['yvthepief', 'github-actions[bot]'],
+    label: 'auto-approve',
   },
+  autoApproveUpgrades: true,
+  autoMerge: true,
+  // autoMergeOptions: {
+  //   approvedReviews: 0,
+  // },
 });
 project.synth();
