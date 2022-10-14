@@ -13,5 +13,6 @@ const project = new awscdk.AwsCdkTypeScriptApp({
     allowedUsernames: ['yvthepief'],
     label: 'auto-approve'
   },
+  autoMerge: true
 });
 project.synth();
