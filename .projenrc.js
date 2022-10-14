@@ -10,8 +10,8 @@ const project = new awscdk.AwsCdkTypeScriptApp({
   defaultReleaseBranch: 'main',
   autoApproveOptions: {
     secret: 'PROJEN_GITHUB_TOKEN',
-    // allowedUsernames: ['yvthepief', 'github-actions[bot]'],
-    // label: 'auto-approve',
+    allowedUsernames: ['yvthepief', 'github-actions[bot]'],
+    label: 'auto-approve',
   },
   autoApproveUpgrades: true,
   autoMerge: true,
