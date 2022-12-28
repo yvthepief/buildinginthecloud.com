@@ -1656,10 +1656,10 @@ console-control-strings@^1.1.0:
   resolved "https://registry.yarnpkg.com/console-control-strings/-/console-control-strings-1.1.0.tgz#3d7cf4464db6446ea644bf4b39507f9851008e8e"
   integrity sha512-ty/fTekppD2fIwRvnZAVdeOiGd1c7YXEixbgJTNzqcxJWKQnjJ/V1bNEEE6hygpM3WjwHFUVK6HTjWSzV4a8sQ==
 
-constructs@^10.0.5:
-  version "10.1.181"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.181.tgz#609d20ac4f04ea79b610edd3814e2f431d06e288"
-  integrity sha512-RGO0WHB/mcRMiCmBOQzG4lmwXybUVc6k7rLpqnMbWntUnpGHjCywkRjV9GzXF2LwAFy+r5bgjBNmm/iH4uwqcA==
+constructs@^10.1.182:
+  version "10.1.202"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.202.tgz#050da1884e889c2cb9b6acba8954794e10fff361"
+  integrity sha512-5X0AwrA4q2ePtHpXKBpLPmL0wUMDSnk+MYwokr2Q3wzUrZ5kpGRs+e7NLFSwEKaXJJFBW/A6/dKNg7SfM85caA==
 
 conventional-changelog-config-spec@^2.1.0:
   version "2.1.0"
@@ -4091,8 +4091,6 @@ p-limit@^2.2.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/p-limit/-/p-limit-2.3.0.tgz#3dd33c647a214fdfffd835933eb086da0dc21db1"
   integrity sha512-//88mFWSJx8lxCzwdAABTJL2MyWB12+eIY7MDL2SqLmAkeKU9qxRvWuSyTjm3FUmpBEMuFfckAIqEaVGUDxb6w==
-  dependencies:
-    p-try "^2.0.0"
 
 p-limit@^3.0.2, p-limit@^3.1.0:
   version "3.1.0"
