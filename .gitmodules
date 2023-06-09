@@ -1,0 +1,15 @@
+[submodule "site/quickstart/themes/ananke"]
+	path = site/quickstart/themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke
+[submodule "site/buildinginthecloud.com/arberia"]
+	path = site/buildinginthecloud.com/arberia
+	url = https://github.com/antedoro/arberia.git
+[submodule "site/themes/arberia"]
+	path = site/themes/arberia
+	url = https://github.com/antedoro/arberia.git
+[submodule "website/buildinginthecloud.com/themes/arberia"]
+	path = website/buildinginthecloud.com/themes/arberia
+	url = https://github.com/antedoro/arberia.git
+[submodule "website/buildinginthecloud.com/themes/roxo-hugo"]
+	path = website/buildinginthecloud.com/themes/roxo-hugo
+	url = git@github.com:StaticMania/roxo-hugo.git
